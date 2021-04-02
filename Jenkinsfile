@@ -21,7 +21,7 @@ node {
   }  
   
   stage('Deploy to Tomcat') {
-    bat "copy target\\timezone.war \C:\\apache-tomcat-8.5.64\\webapps\\timezone.war\"
+    bat "copy target\\timezone.war C:\\apache-tomcat-8.5.64\\webapps\\timezone.war\"
   }
   
 }
