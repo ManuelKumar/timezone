@@ -1,7 +1,7 @@
 node {
   
-   def tomcatWeb = 'C:\\apache-tomcat\\webapps'
-   def tomcatBin = 'C:\\apache-tomcat\\bin'
+   def tomcatWeb = 'C:\\apache-tomcat-8.5.64\\webapps'
+   def tomcatBin = 'C:\\apache-tomcat-8.5.64\\bin'
    //def mvnHome = 'C:\\apache-maven-3.5.4'
   
   stage('SCM CheckOut') {
@@ -21,7 +21,7 @@ node {
   }  
   
   stage('Deploy to Tomcat') {
-    bat "copy target\\timezone.war \C:\\apache-tomcat\\webapps\\timezone.war\"
+    bat "copy target\\timezone.war \"{tomcatWeb}\\timezone.war\""
   }
   
 }
