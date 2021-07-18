@@ -13,12 +13,12 @@ node {
      bat "${mvnHome}/bin/mvn package"
   }  
   
-  stage('Sonar Analysis') {
+  /*stage('Sonar Analysis') {
      def mvnHome = tool name: 'maven-3', type: 'maven'
      withSonarQubeEnv('sonar-6') {
       bat "${mvnHome}/bin/mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2.0.1227:sonar"
      } 
-  }  
+  }  */
   
   stage('Deploy to Tomcat') {
     bat 'copy target\\timezone.war "C:\\apache-tomcat-8.5.64\\webapps\\timezone.war"'
