@@ -112,18 +112,16 @@
 
 	
 	<distributionManagement>
-		<repository>
-			<id>artifactory</id>
-			<name>TimeZone_CI_Builds</name>
-			<url>http://localhost:8081/artifactory/TimeZone_CI_Builds</url>
-		</repository>
-
 	    <snapshotRepository>
-		<id>snapshots</id>
-		<name>DESKTOP-1P7TPHD-snapshots</name>
-		<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+	        <id>snapshots</id>
+	        <name>DESKTOP-1P7TPHD-snapshots</name>
+	        <url>http://localhost:8046/artifactory/time-zone-libs-snapshot</url>
 	    </snapshotRepository>
-	    		
+	    <repository>
+	        <id>central</id>
+	        <name>DESKTOP-1P7TPHD-releases</name>
+	        <url>http://localhost:8046/artifactory/time-zone-libs-release</url>
+	    </repository>	    
 	</distributionManagement>
 
 
